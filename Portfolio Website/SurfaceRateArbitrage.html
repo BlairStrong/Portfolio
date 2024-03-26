@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>DOM</title>
+    <script src="ArbitrageScript.js"></script>
+  </head>
+  <body>
+    <div class="site_navigation">
+      <input type="button" id="image-button" value="Back to Profile" onclick="location.href='index.html';"></input>
+    </div>
+    <H1 class="headername">Surface Rate Triangular Arbitrage Calculator</H1>
+
+
+    <div class="disclaimer">
+      <div>This prototyped triangular arbitrage calculator is using the price from the binance API. This does not consider the bid/ask spread.</div>
+      <div>This is strictly the surface rate - the percentage return at the most favorable order book prices.</div>
+      <div>These returns do not consider fees associated with trading on Binance</div>
+    </div>
+    
+
+    <input type="submit" id="get-binance-data" onclick="main()" value="Get Binance Data"></input>
+    <table id="BinanceData">
+      <tr>
+        <th>Surface Rate %</th>
+        <th>Pair 1</th>
+        <th>Pair 1 Price</th>
+        <th>Pair 2</th>
+        <th>Pair 2 Price</th>
+        <th>Pair 3</th>
+        <th>Pair 3 Price</th>
+      </tr>
+    </table>
+    <script>
+      
+      // getting api data and turning into json form
+      //const symbol_set = getSymbolListinJSONform("https://api4.binance.com/api/v3/ticker/price")
+      // const base_tokens = getTokens("https://api.binance.com/api/v3/exchangeInfo", "baseAsset")
+      // console.log(base_tokens)
+
+
+      // const quote_tokens = getTokens("https://api.binance.com/api/v3/exchangeInfo", "quoteAsset")
+      // const pair_list = getPairList("https://api4.binance.com/api/v3/ticker/price")
+
+
+    </script>
+  </body>
+</html>
