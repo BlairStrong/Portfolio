@@ -1,0 +1,241 @@
+body {
+  background-color: whitesmoke;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+.box-wrapper {
+  height: 95vh;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border-color: #ffec45;
+  padding: 30px;
+  position:relative;
+}
+
+#box1 {
+  padding: 10px;
+
+}
+
+#box2 {
+  padding: 8px;
+
+}
+
+#box3 {
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#box4 {
+  flex-grow: 1;
+}
+
+.middle-column {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle-column div {
+  flex-grow: 1;
+  margin: 0 8px;
+}
+
+.middle-column div+div {
+  margin-top: 8px
+}
+
+#box8 {
+  flex-grow: 1;
+}
+
+.rightpart {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
+}
+
+.rightpartsub {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+.leftpart {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.leftpartphoto {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.leftpartSection {
+  display: flex;
+  flex-direction: column;
+  flex:auto;
+  color: whitesmoke;
+}
+
+.leftpartSectionHeading {
+  align-self: start;
+  padding-left: 30px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.leftpartSectionValues {
+  align-self: start;
+  padding-left: 30px;
+
+}
+
+.leftpartcontactdetails {
+  display: flex;
+  flex-direction: column;
+  flex:auto;
+  border: solid 1px orange;
+}
+
+img {
+  border-radius: 100px;  
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(16, 11, 39);
+  color: whitesmoke;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome {
+  font-size: 50px;
+  padding: 10px;
+}
+
+#awesome {
+  position: relative; /* Ensure relative positioning for absolutely positioned pseudo-element */
+  color: #ffffff; /* Text color */
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Define styles for the underline pseudo-element */
+#awesome::after {
+  content: ''; /* Necessary for pseudo-elements */
+  position: absolute; /* Position absolutely relative to the span */
+  left: 0; /* Align with the left edge of the span */
+  bottom: -2px; /* Move 2 pixels below the baseline of the text */
+  width: 0%; /* Full width */
+  height: 2px; /* Height of the underline */
+  background-color: #007bff; /* Color of the underline */
+  font-weight: bold;
+  color: aqua;
+  transition: 0.2s; /* Add transition effect to width */
+}
+
+/* Define animation when hovering over the span */
+#awesome:hover::after {
+  width: 100%; /* Expand underline to full width on hover */
+}
+
+a {
+  font-size: 25px;
+  align-self: baseline;
+  padding-left: 100px;
+  padding-top: 20x;
+  padding-bottom: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  border: #ffec45;
+  border-width: 2px;;
+}
+
+.surname {
+
+  font-weight: lighter;
+  color: #a0a0a0;
+}
+
+.button-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px; /* Adjust as needed */
+  margin-left: 90%;
+  text-align: center;
+  width:200px;
+  border-radius: 40px;
+}
+
+#dropdown-btn {
+  position:relative;
+  display: inline-block;
+  background-color: #007bff;
+  text-align: center;
+  color: white;
+  padding: 10px 20px;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+  width:200px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 60px; /* Adjust as needed */
+  right: 0px;
+  background-color: rgb(16, 11, 39);
+  min-width: 400px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #007bff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(16, 11, 39);
+  color: #a0a0a0;
+}
+
+.button-wrapper:hover .dropdown-content {
+  display: block;
+  opacity: 0.7;
+  transform: translateY(0);
+}
+
+.button-wrapper:hover #dropdown-btn {
+  background-color: #a0a0a0;
+}
+
+.button-wrapper:hover #rotate {
+  transform: rotate(-90deg);
+}
+
+#rotate {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
